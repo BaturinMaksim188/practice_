@@ -12,6 +12,7 @@ int adm() {
 
     std::string name;
     int amount = 0;
+    std::string stramount;
 
     std::string delname;
     int del;
@@ -33,7 +34,7 @@ int adm() {
                         name   TEXT    UNIQUE NOT NULL,
                         amount INTEGER NOT NULL);)";
 
-    const char* sqladdpos = R"(INSERT INTO positions (name, amount) VALUES (name, std::to_string(amount));)";
+    const char* sqladdpos = R"(INSERT INTO positions (name, amount) VALUES (name, stramount);)";
 
     const char* sqldelpos = R"(DELETE FROM positions WHERE name = delname;)";
     const char* sqldelallpos = R"(TRUNCATE TABLE positions;)";
@@ -44,8 +45,8 @@ int adm() {
     const char* sqlupdateamount = R"(UPDATE positions SET amount = newamount WHERE name = nowamountname;)";
 
 
-    sqlite3_exec(db, SQL, 0, 0, &err);
     rc = sqlite3_open("data.db", &db);
+    sqlite3_exec(db, SQL, 0, 0, &err);
     
     if (rc) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
@@ -82,6 +83,7 @@ int adm() {
                 continue;
             }
 
+            stramount = std::to_string(amount);
             sqlite3_exec(db, sqladdpos, 0, 0, &err);
             std::cout << "Успешно!" << std::endl;
             name = "";

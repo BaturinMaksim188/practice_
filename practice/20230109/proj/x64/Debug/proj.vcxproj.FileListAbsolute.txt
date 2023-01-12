@@ -1,3 +1,6 @@
 C:\Users\Максим\Desktop\C++\proj\20230109\proj\x64\Debug\proj.vcxproj.CopyComplete
 C:\Users\Максим\Desktop\C++\proj\20230109\proj\x64\Debug\proj.exe
 C:\Users\Максим\Desktop\C++\proj\20230109\proj\x64\Debug\sqlite3.dll
+C:\Users\Максим\Desktop\C++\practice_\practice\20230109\proj\x64\Debug\proj.exe
+C:\Users\Максим\Desktop\C++\practice_\practice\20230109\proj\x64\Debug\proj.vcxproj.CopyComplete
+C:\Users\Максим\Desktop\C++\practice_\practice\20230109\proj\x64\Debug\sqlite3.dll
